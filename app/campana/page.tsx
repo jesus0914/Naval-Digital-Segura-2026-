@@ -92,7 +92,7 @@ const videos = [
 ];
 export default function CampañaPage() {
   return (
-    <main className="bg-white text-slate-900 min-h-screen pt-28 px-6">
+    <main className="bg-white text-slate-900 min-h-screen pt-28 px-6 pb-16">
 
       <div className="max-w-5xl mx-auto space-y-24">
 
@@ -647,17 +647,17 @@ export default function CampañaPage() {
 
           </section>
         {/* CIERRE */}
-<section className="text-center border border-slate-200 border-b-4 border-b-cyan-600 p-6 sm:p-8 md:p-10 rounded-2xl bg-slate-50 shadow-sm mb-12">
-  <h2 className="text-xl sm:text-2xl font-bold text-cyan-700">
-    La seguridad digital es una competencia esencial del siglo XXI
-  </h2>
+        <section className="text-center border border-slate-200 border-b-4 border-b-cyan-600 p-6 sm:p-8 md:p-10 rounded-2xl bg-slate-50 shadow-sm mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold text-cyan-700">
+            La seguridad digital es una competencia esencial del siglo XXI
+          </h2>
 
-  <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-4 max-w-3xl mx-auto">
-    Educar en ciberseguridad significa formar ciudadanos responsables,
-    críticos y preparados para desenvolverse de manera segura en los
-    entornos digitales actuales.
-  </p>
-</section>
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-4 max-w-3xl mx-auto">
+            Educar en ciberseguridad significa formar ciudadanos responsables,
+            críticos y preparados para desenvolverse de manera segura en los
+            entornos digitales actuales.
+          </p>
+        </section>  
 
       </div>
     </main>
