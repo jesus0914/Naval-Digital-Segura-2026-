@@ -5,18 +5,16 @@ export default function Hero() {
   return (
     <section className="relative w-full h-[680px] flex items-center overflow-hidden bg-[#070d1a] text-white font-sans">
     {/* Imagen de Fondo - 100% Clara y sin filtros oscuros */}
-    <div className="absolute inset-0 z-0 opacity-70 md:opacity-100 md:left-1/3 lg:left-1/2 w-full md:w-2/3 lg:w-1/2 h-full">
-  <Image
-    src="/colegio.png"
-    alt="Colegio Naval de Crespo"
-    fill
-    priority
-    sizes="(max-width: 768px) 100vw, 50vw"
-    className="object-cover object-center"
-  />
-
-  <div className="absolute inset-0 bg-gradient-to-r from-[#070d1a] via-[#070d1a]/10 to-transparent" />
-</div>
+    <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+      <Image
+        src="/campaña.png"
+        alt="Campaña Naval Digital Segura"
+        width={1600}
+        height={900}
+        sizes="(max-width: 768px) 100vw, 896px"
+        className="w-full h-auto object-cover"
+      />
+    </div>
 
       {/* Fondo limpio: Eliminamos el degradado negro superior para dar luz total */}
       <div className="absolute inset-0 bg-[#070d1a]/5 z-0" />
