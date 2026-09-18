@@ -647,7 +647,7 @@ export default function CampañaPage() {
 
           </section>
         {/* CIERRE */}
-<section className="text-center border border-slate-200 border-b-4 border-b-cyan-600 p-6 sm:p-8 md:p-10 rounded-2xl bg-slate-50 shadow-sm">
+<section className="text-center border border-slate-200 border-b-4 border-b-cyan-600 p-6 sm:p-8 md:p-10 rounded-2xl bg-slate-50 shadow-sm mb-12">
   <h2 className="text-xl sm:text-2xl font-bold text-cyan-700">
     La seguridad digital es una competencia esencial del siglo XXI
   </h2>
