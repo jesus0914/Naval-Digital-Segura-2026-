@@ -59,9 +59,9 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* =========================
+/* =========================================================
    ANIMACIONES
-   ========================= */
+   ========================================================= */
 
 @keyframes scan {
   0% {
@@ -131,9 +131,9 @@
   animation: threatBar 1.8s ease-out;
 }
 
-/* =========================
+/* =========================================================
    VARIABLES
-   ========================= */
+   ========================================================= */
 
 :root {
   --background: oklch(1 0 0);
@@ -225,20 +225,185 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* =========================
+/* =========================================================
    BASE
-   ========================= */
+   ========================================================= */
 
 @layer base {
-  * {
+  *,
+  *::before,
+  *::after {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
 
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply bg-background text-foreground;
+    min-width: 320px;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  img,
+  video,
+  svg,
+  canvas {
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+  }
+
+  iframe {
+    max-width: 100%;
+    border: 0;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    touch-action: manipulation;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =========================================================
+   CONTENEDORES RESPONSIVOS
+   ========================================================= */
+
+@media (max-width: 640px) {
+  main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    max-width: 100%;
+  }
+
+  h1 {
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    line-height: 1.2;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}
+
+/* =========================================================
+   VIDEOS / YOUTUBE
+   ========================================================= */
+
+.video-responsive {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.video-responsive iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* =========================================================
+   TABLAS RESPONSIVAS
+   ========================================================= */
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-responsive table {
+  min-width: 640px;
+}
+
+/* =========================================================
+   ELEMENTOS QUE PUEDEN DESBORDARSE
+   ========================================================= */
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+input,
+textarea,
+select {
+  max-width: 100%;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   REDUCCIÓN DE ANIMACIONES EN DISPOSITIVOS
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================================
+   PANTALLAS PEQUEÑAS
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .animate-float,
+  .animate-radar,
+  .animate-scan {
+    animation: none;
+  }
+
+  .video-responsive {
+    border-radius: 0.75rem;
   }
 }
