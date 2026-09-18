@@ -9,7 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Mi App",
+  title: "Naval Digital Segura",
   description: "Aplicación con Next.js",
 };
 
