@@ -151,15 +151,15 @@ export default function CampañaPage() {
 
         {/* IMAGEN */}
         <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
-          <Image
-            src="/campaña.png"
-            alt="Campaña Naval Digital Segura"
-            width={1600}
-            height={900}
-            sizes="(max-width: 768px) 100vw, 896px"
-            className="w-full h-auto object-cover"
-          />
-        </div>
+        <Image
+          src="/campaña.png"
+          alt="Campaña Naval Digital Segura"
+          width={1600}
+          height={900}
+          sizes="(max-width: 768px) 100vw, 896px"
+          className="w-full h-auto object-cover"
+        />
+      </div>
 
         {/* BADGE */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-50 border border-cyan-200">
