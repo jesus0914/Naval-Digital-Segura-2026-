@@ -6,14 +6,14 @@ export default function Hero() {
     <section className="relative w-full h-[680px] flex items-center overflow-hidden bg-[#070d1a] text-white font-sans">
     {/* Imagen de Fondo - 100% Clara y sin filtros oscuros */}
     <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
-    <Image
-      src="/campana.png"
-      alt="Campaña Naval Digital Segura"
-      width={1600}
-      height={900}
-      sizes="(max-width: 768px) 100vw, 896px"
-      className="w-full h-auto object-cover"
-    />
+      <Image
+        src="/campaña.png"
+        alt="Campaña Naval Digital Segura"
+        width={1600}
+        height={900}
+        sizes="(max-width: 768px) 100vw, 896px"
+        className="w-full h-auto object-cover"
+      />
     </div>
 
       {/* Fondo limpio: Eliminamos el degradado negro superior para dar luz total */}
