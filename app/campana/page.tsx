@@ -647,19 +647,19 @@ export default function CampañaPage() {
 
           </section>
         {/* CIERRE */}
-       <section className="text-center border border-slate-200 p-10 rounded-2xl bg-slate-50">
+     <section className="text-center border border-slate-200 border-b-4 border-b-cyan-600 p-6 sm:p-8 md:p-10 rounded-2xl bg-slate-50 shadow-sm">
 
-        <h2 className="text-2xl font-bold text-cyan-700">
-          La seguridad digital es una competencia esencial del siglo XXI
-        </h2>
+  <h2 className="text-xl sm:text-2xl font-bold text-cyan-700">
+    La seguridad digital es una competencia esencial del siglo XXI
+  </h2>
 
-        <p className="text-slate-600 text-lg leading-relaxed mt-4 max-w-3xl mx-auto">
-          Educar en ciberseguridad significa formar ciudadanos responsables,
-          críticos y preparados para desenvolverse de manera segura en los
-          entornos digitales actuales.
-        </p>
+  <p className="text-slate-600 text-base sm:text-lg leading-relaxed mt-4 max-w-3xl mx-auto">
+    Educar en ciberseguridad significa formar ciudadanos responsables,
+    críticos y preparados para desenvolverse de manera segura en los
+    entornos digitales actuales.
+  </p>
 
-      </section>
+</section>
 
       </div>
     </main>
