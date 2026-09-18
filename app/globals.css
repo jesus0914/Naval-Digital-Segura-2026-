@@ -47,9 +47,6 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
 
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -59,9 +56,9 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* =========================================================
+/* =========================
    ANIMACIONES
-   ========================================================= */
+   ========================= */
 
 @keyframes scan {
   0% {
@@ -131,9 +128,9 @@
   animation: threatBar 1.8s ease-out;
 }
 
-/* =========================================================
+/* =========================
    VARIABLES
-   ========================================================= */
+   ========================= */
 
 :root {
   --background: oklch(1 0 0);
@@ -225,9 +222,9 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* =========================================================
+/* =========================
    BASE
-   ========================================================= */
+   ========================= */
 
 @layer base {
   *,
@@ -246,20 +243,20 @@
 
   body {
     @apply bg-background text-foreground;
+    margin: 0;
     min-width: 320px;
     overflow-x: hidden;
-    margin: 0;
   }
+
+  /* Importante:
+     NO modificar height de las imágenes.
+     Esto permite que next/image con fill
+     continúe funcionando correctamente. */
 
   img,
   video,
-  svg,
   canvas {
     max-width: 100%;
-  }
-
-  img {
-    height: auto;
   }
 
   iframe {
@@ -289,31 +286,61 @@
   li {
     overflow-wrap: anywhere;
   }
+
+  svg {
+    flex-shrink: 0;
+  }
 }
 
-/* =========================================================
-   CONTENEDORES RESPONSIVOS
-   ========================================================= */
+/* =========================
+   TABLETS
+   ========================= */
 
-@media (max-width: 640px) {
-  main {
-    width: 100%;
-    max-width: 100%;
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
     overflow-x: hidden;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  h2 {
+    line-height: 1.15;
   }
 
   section {
     max-width: 100%;
   }
+}
+
+/* =========================
+   MÓVILES
+   ========================= */
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
 
   h1 {
     line-height: 1.08;
-    letter-spacing: -0.025em;
+    letter-spacing: -0.02em;
   }
 
   h2 {
     line-height: 1.15;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
   }
 
   h3 {
@@ -321,13 +348,35 @@
   }
 
   p {
-    line-height: 1.6;
+    line-height: 1.55;
+  }
+
+  .animate-radar {
+    animation-duration: 20s;
+  }
+
+  .animate-float {
+    animation-duration: 5s;
   }
 }
 
-/* =========================================================
-   VIDEOS / YOUTUBE
-   ========================================================= */
+/* =========================
+   MÓVILES PEQUEÑOS
+   ========================= */
+
+@media (max-width: 480px) {
+  .animate-scan {
+    animation: none;
+  }
+
+  .animate-radar {
+    animation: none;
+  }
+}
+
+/* =========================
+   VIDEOS RESPONSIVOS
+   ========================= */
 
 .video-responsive {
   position: relative;
@@ -343,9 +392,9 @@
   display: block;
 }
 
-/* =========================================================
-   TABLAS RESPONSIVAS
-   ========================================================= */
+/* =========================
+   TABLAS
+   ========================= */
 
 .table-responsive {
   width: 100%;
@@ -357,15 +406,22 @@
   min-width: 640px;
 }
 
-/* =========================================================
-   ELEMENTOS QUE PUEDEN DESBORDARSE
-   ========================================================= */
+/* =========================
+   CÓDIGO
+   ========================= */
 
-pre,
-code {
+pre {
   max-width: 100%;
   overflow-x: auto;
 }
+
+code {
+  overflow-wrap: anywhere;
+}
+
+/* =========================
+   FORMULARIOS
+   ========================= */
 
 input,
 textarea,
@@ -373,13 +429,9 @@ select {
   max-width: 100%;
 }
 
-svg {
-  flex-shrink: 0;
-}
-
-/* =========================================================
-   REDUCCIÓN DE ANIMACIONES EN DISPOSITIVOS
-   ========================================================= */
+/* =========================
+   ACCESIBILIDAD
+   ========================= */
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -389,21 +441,5 @@ svg {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-/* =========================================================
-   PANTALLAS PEQUEÑAS
-   ========================================================= */
-
-@media (max-width: 480px) {
-  .animate-float,
-  .animate-radar,
-  .animate-scan {
-    animation: none;
-  }
-
-  .video-responsive {
-    border-radius: 0.75rem;
   }
 }
