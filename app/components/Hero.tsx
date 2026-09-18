@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative w-full h-[680px] flex items-center overflow-hidden bg-[#070d1a] text-white font-sans">
     {/* Imagen de Fondo - 100% Clara y sin filtros oscuros */}
-      <div className="absolute inset-0 z-0 opacity-70 md:opacity-100 md:left-1/3 lg:left-1/2 w-full md:w-2/3 lg:w-1/2 h-full">
+    <div className="absolute inset-0 z-0 opacity-70 md:opacity-100 md:left-1/3 lg:left-1/2 w-full md:w-2/3 lg:w-1/2 h-full">
   <Image
     src="/colegio.png"
     alt="Colegio Naval de Crespo"
@@ -15,9 +15,8 @@ export default function Hero() {
     className="object-cover object-center"
   />
 
-  {/* Desvanecido sutil solo en el borde izquierdo */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#070d1a] via-[#070d1a]/10 to-transparent" />
-      </div>
+</div>
 
       {/* Fondo limpio: Eliminamos el degradado negro superior para dar luz total */}
       <div className="absolute inset-0 bg-[#070d1a]/5 z-0" />
