@@ -150,7 +150,7 @@ export default function CampañaPage() {
         <section className="space-y-8">
 
         {/* IMAGEN */}
-        <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
+       <div className="max-w-4xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
         <Image
           src="/campaña.png"
           alt="Campaña Naval Digital Segura"
